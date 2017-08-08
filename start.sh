@@ -2,7 +2,8 @@
 
 sudo apt-get -y  install nodejs
 sudo apt-get -y  install npm
-npm install gulp --save-dev
+npm install --global gulp-cli
+npm install --save-dev gulp
 npm install gulp-ruby-sass \
 	 gulp-autoprefixer \
 	 gulp-cssnano \
@@ -14,4 +15,4 @@ npm install gulp-ruby-sass \
 	 gulp-rename \
 	 gulp-livereload \
 	 gulp-cache del \
-	 --save-dev
+	 

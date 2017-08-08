@@ -23,7 +23,7 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: { //path to sources
-        html: 'src/html/*.html', 
+        html: 'src/*.html', 
         js: 'src/js/main.js',
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*', 
