@@ -2,7 +2,7 @@
  
 var gulp = require('gulp'),
     runSequence = require('run-sequence'),
-	rigger = require('gulp-rigger'),
+    rigger = require('gulp-rigger'),
     // watch = require('gulp-watch'),
     // prefixer = require('gulp-autoprefixer'),
     // uglify = require('gulp-uglify'),
@@ -75,7 +75,6 @@ gulp.task('clean', function (cb) {
 // run all tasks
 gulp.task('start', function(done) {
     runSequence('clean', 'html:build', 'css:build', function() {
-        console.log('Run something else');
         done();
     });
 });
