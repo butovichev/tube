@@ -16,5 +16,6 @@ npm install gulp-sass \
 	 gulp-rename \
 	 gulp-livereload \
 	 gulp-cache del \
+	 run-sequence \
 	 --save-dev 
 	 

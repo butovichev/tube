@@ -1,6 +1,7 @@
 'use strict';
  
 var gulp = require('gulp'),
+    runSequence = require('run-sequence'),
 	rigger = require('gulp-rigger'),
     // watch = require('gulp-watch'),
     // prefixer = require('gulp-autoprefixer'),
@@ -69,4 +70,12 @@ gulp.task('css:build', function () {
 // clean build
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
+});
+
+// run all tasks
+gulp.task('start', function(done) {
+    runSequence('clean', 'html:build', 'css:build', function() {
+        console.log('Run something else');
+        done();
+    });
 });
