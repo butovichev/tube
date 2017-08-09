@@ -5,17 +5,20 @@ npm install --save-dev gulp
 
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
-npm install gulp-sass \
-	 gulp-autoprefixer \
-	 gulp-cssnano \
-	 gulp-jshint \
-	 gulp-concat \
-	 gulp-uglify \
-	 gulp-imagemin \
-	 gulp-notify \
-	 gulp-rename \
-	 gulp-livereload \
-	 gulp-cache del \
-	 run-sequence \
-	 --save-dev 
+npm install \
+	gulp-sass \
+	gulp-autoprefixer \
+	gulp-cssnano \
+	gulp-jshint \
+	gulp-concat \
+	gulp-uglify \
+	gulp-imagemin \
+	gulp-notify \
+	gulp-rename \
+	gulp-livereload \
+	gulp-cache del \
+	run-sequence \
+	gulp-htmlhint \
+	gulp-csslint \
+	--save-dev 
 	 

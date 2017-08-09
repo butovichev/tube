@@ -3,6 +3,8 @@
 var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     rigger = require('gulp-rigger'),
+    htmlhint = require('gulp-htmlhint'),
+    csslint = require('gulp-csslint'),
     // watch = require('gulp-watch'),
     // prefixer = require('gulp-autoprefixer'),
     // uglify = require('gulp-uglify'),
@@ -51,10 +53,13 @@ var path = {
 //     logPrefix: "Frontend_Devil"
 // };
 
+
+
 // build html
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
+        .pipe(htmlhint())
         .pipe(gulp.dest(path.build.html))
         //.pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
@@ -64,6 +69,8 @@ gulp.task('css:build', function () {
   return gulp.src(path.src.scss)
     .pipe(rigger())
     .pipe(scss().on('error', scss.logError))
+    .pipe(csslint())
+    // .pipe(csslint.formatter())
     .pipe(gulp.dest(path.build.css));
 });
 
