@@ -2,6 +2,8 @@ sudo apt-get -y  install nodejs
 sudo apt-get -y  install npm
 sudo npm install -g gulp-cli
 npm install --save-dev gulp
+npm install --save-dev imagemin-pngquant
+npm install --save-dev browser-sync
 
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
@@ -20,5 +22,7 @@ npm install \
 	run-sequence \
 	gulp-htmlhint \
 	gulp-csslint \
+	gulp-watch \
+
 	--save-dev 
 	 
