@@ -28,7 +28,7 @@ var path = {
     src: { //path to sources
         html: 'src/*.html', 
         js: 'src/js/main.js',
-        style: 'src/style/main.scss',
+        style: 'src/main.scss',
         img: 'src/img/**/*.*', 
         fonts: 'src/fonts/**/*.*',
         scss: 'src/*.scss',
@@ -36,7 +36,7 @@ var path = {
     watch: { //change files
         html: 'src/**/*.html',
         js: 'src/js/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -68,7 +68,7 @@ gulp.task('style:build', function () {
   gulp.src(path.src.style)
     .pipe(rigger())
     .pipe(scss().on('error', scss.logError))
-    .pipe(prefixer())
+    // .pipe(prefixer())
     .pipe(csslint())
     // .pipe(csslint.formatter())
     .pipe(gulp.dest(path.build.css))
