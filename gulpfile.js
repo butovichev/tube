@@ -27,11 +27,12 @@ var path = {
     },
     src: { //path to sources
         html: 'src/*.html', 
-        js: 'src/js/main.js',
+        js: 'src/js/*.js',
         style: 'src/main.scss',
         img: 'src/img/**/*.*', 
         fonts: 'src/fonts/**/*.*',
         scss: 'src/*.scss',
+        css: 'src/css/*.css',
     },
     watch: { //change files
         html: 'src/**/*.html',
@@ -73,6 +74,9 @@ gulp.task('style:build', function () {
     // .pipe(csslint.formatter())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true})); 
+   gulp.src(path.src.css)
+    .pipe(gulp.dest(path.build.css))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', function () {
