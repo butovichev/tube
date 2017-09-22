@@ -1,6 +1,6 @@
 /* 1.1 - Header Styles
     -----------------------------------------------------------------*/
-$black-color: #333;
+$black-color: #000000;
 
 .header-top{
 	
@@ -26,7 +26,7 @@ $black-color: #333;
     height: 2px;
     border-radius: 1px;
     margin: 4px 0;
-    background-color: gray;
+    background-color: $black-color;
 }
 
 #main-menu a{
