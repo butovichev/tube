@@ -1,4 +1,64 @@
-.menu{
-    text-align:center;
+$black-color: #000000;
+$white-color: #ffffff;
+
+/* 1.1 - Menu Styles
+    -----------------------------------------------------------------*/
+.main-navbar{
+	font-size: 18px;
+}
+
+.navbar-toggle{
+	display: block;
+	height: 40px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 4px 0;
+    background-color: $black-color;
+}
+
+#main-menu{
+	position: relative;
+	z-index: 100;
+}
+
+#main-menu a{
+	color: $black-color;
+}
+
+#main-menu a:hover{
+	text-decoration: underline;
+}
+
+.navbar-toggler{
+	background-color: $white-color;
+}
+
+.navbar-nav{
+	background-color: $white-color;
+	border-radius: 10px;	
+}
+
+
+
+@media only screen and (max-width: 1230px){
+	.navbar-toggler-right, .navbar-toggleable-md .navbar-toggler{
+		top: 15px; 
+		display: block !important;
+	}
+	#navbarSupportedContent{
+		
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.navbar-toggler-right, .navbar-toggleable-md .navbar-toggler{
+		top: -35px; 
+		display: block !important;
+	}
 }
 
