@@ -29,7 +29,7 @@ var path = {
         html: 'src/*.html', 
         js: 'src/js/*.js',
         style: 'src/main.scss',
-        img: 'src/img/**/*.*', 
+        img: 'src/images/**/*.*', 
         fonts: 'src/fonts/**/*.*',
         scss: 'src/*.scss',
         css: 'src/css/*.css',
@@ -102,6 +102,14 @@ gulp.task('image:build', function () {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('kostya_image:build', function () {
+    gulp.src(path.src.img) //Выберем наши картинки
+        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(reload({stream: true}));
+});
+
+
+
 
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
@@ -146,6 +154,7 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
+    'kostya_image:build'
     // 'image:build'
 ]);
 

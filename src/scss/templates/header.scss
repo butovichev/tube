@@ -1,9 +1,11 @@
 /* 1.1 - Header Styles
     -----------------------------------------------------------------*/
 $black-color: #000000;
+$white-color: #ffffff;
 
 .header-top{
-	
+	height: 80px;
+	padding: 10px 0 0 0;
 }
 
 .header-logo{
@@ -29,6 +31,11 @@ $black-color: #000000;
     background-color: $black-color;
 }
 
+#main-menu{
+	position: relative;
+	z-index: 100;
+}
+
 #main-menu a{
 	color: $black-color;
 }
@@ -37,5 +44,17 @@ $black-color: #000000;
 	text-decoration: underline;
 }
 
+.navbar-toggler{
+	background-color: $white-color;
+}
+
+.navbar-nav{
+	background-color: $white-color;
+	border-radius: 10px;	
+}
+
+.navbar-toggler-right{
+	top: -35px;
+}
 
 
