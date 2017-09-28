@@ -38,7 +38,7 @@ var path = {
         html: 'src/**/*.html',
         js: 'src/js/*.js',
         style: 'src/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
@@ -136,7 +136,7 @@ gulp.task('watch', function(){
         gulp.start('js:build');
     });
     watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
+        gulp.start('kostya_image:build');
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');

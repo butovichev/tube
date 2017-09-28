@@ -1,64 +1,91 @@
-$black-color: #000000;
-$white-color: #ffffff;
+/* 2.3 - navbar 
+-----------------------------------------------------------------*/
 
-/* 1.1 - Menu Styles
-    -----------------------------------------------------------------*/
-.main-navbar{
+.navbar-nav{
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0;
+	width: 75%;
+}
+
+.nav{
+	height: $header-top-height;
+}
+
+#fixed-navbar{
+	height: $header-top-height;
+	padding: 0;
+}
+
+.nav>li {
+    position: relative;
+    text-transform: capitalize;
+    border-left: 1px solid rgba(255, 255, 255, .2);
+}
+
+.nav>li>a {
 	font-size: 18px;
-}
-
-.navbar-toggle{
-	display: block;
-	height: 40px;
-}
-
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-    margin: 4px 0;
-    background-color: $black-color;
-}
-
-#main-menu{
-	position: relative;
-	z-index: 100;
-}
-
-#main-menu a{
 	color: $black-color;
 }
 
-#main-menu a:hover{
-	text-decoration: underline;
-}
-
-.navbar-toggler{
+/* 2.4 - dropdown-menu
+-----------------------------------------------------------------*/
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	padding: 0;
+	margin: 2px 0 0;
+	text-align: left;
+	list-style: none;
 	background-color: $white-color;
+	border: 1px solid $border-color;
+	border-radius: 5px;
 }
 
-.navbar-nav{
-	background-color: $white-color;
-	border-radius: 10px;	
+.dropdown-menu > li{
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	width: 250px;
 }
 
-
-
-@media only screen and (max-width: 1230px){
-	.navbar-toggler-right, .navbar-toggleable-md .navbar-toggler{
-		top: 15px; 
-		display: block !important;
-	}
-	#navbarSupportedContent{
-		
-	}
+.dropdown-menu > li > a {
+	font-size: 14px;
+	display: block;
+	padding: 10px 15px;
+	clear: both;
+	font-weight: 400;
+	color: $black-color;;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out; 
 }
 
-@media only screen and (max-width: 768px){
-	.navbar-toggler-right, .navbar-toggleable-md .navbar-toggler{
-		top: -35px; 
-		display: block !important;
-	}
+#fixed-navbar-toggle li ul {
+	display: block;
+	left: 0;
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: 800ms ease;
+	-moz-transition: 800ms ease;
+	-o-transition: 800ms ease;
+	transition: 800ms ease; 
 }
-
+#fixed-navbar-toggle ul > li:hover ul {
+	visibility: visible;
+	opacity: 1;
+}
+.nav ul:before, .nav ul:after {
+	content: "";
+	display: table;
+}
+.nav ul:after {
+	clear: both;
+}

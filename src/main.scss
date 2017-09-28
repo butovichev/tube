@@ -1,5 +1,95 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack:    'Open Sans', sans-serif;
 $primary-color: #333;
+$black-color: #000000;
+$white-color: #FFFFFF;
+$header-top-height: 80px;
+$border-color: #dde0e5;
+/*-----------------------------------------------------------------------------------
+     
+        Theme Name: Tube Theme
+    	Description: Tube Theme
+    	Author: Korepin&Butovichev Team
+    	Author URI: https://themeforest.net/user/via-theme
+    	Version: 1.0
+     
+    -----------------------------------------------------------------------------------*/
+/* ================================ */
+/* ======== TABLE OF CONTENTS ========= */
+/* ================================ */
+/*
+    * 1.0 - Common Styles +
+     *   1.1 - Basic Layout Styles +
+     *   1.2 - Heading Styles
+     *   1.3 - Pagination
+     *   1.4 - Row
+     *   1.5 - Module
+     *   	1.5.1 - Schedule Promo Module 
+     *   1.6 - Add Place
+     *   1.7 - Social Media
+     *   1.8 - Labels
+     *   1.9 - Rollover Thumbnail
+     *   1.10 - Breadcrumbs
+     *   1.11 - Read More
+     *   1.12 - Play Icon
+     *   1.13 - Hour / Date / Day
+     *   1.14 - UI Top
+     *   1.15 - Blockquote
+     *   1.16 - List Styles
+     *   1.17 - Buttons
+     *   1.18 - Page Loading
+     * 2.0 - Header Styles +
+     *   2.1 - Page Loading +
+     *   2.2 - Top Header Styles +
+     *   2.3 - navbar +
+     *   2.4 - dropdown-menu +
+     *   2.5 - nav-below-main
+     *   	2.5.1 - Clock / Date 
+     *   2.6 - dropdown menu
+     *   2.7 - sidenav off-canvas menu 
+     * 3.0 - Main Section
+     *   3.1 - News
+     *   3.2 - Container-Full & Container-Half
+     *   3.3 - Entry Block
+     *   3.4 - Category List
+     *   3.5 - Article
+     *   3.6 - Tabs
+     *   3.7 - Tabels
+     *   3.8 - Post
+     *   3.9 - Breaking News Ticker & News On-Air
+     *   3.10 - Exchange Rates
+     *   3.11 - Currency Converter
+     * 4.0 - Sidebar
+     *   4.1 - sidebar-newsfeed and sidebar-post 
+     *   4.2 - sidebar-image and sidebar-block
+     *   4.3 - sidebar-newsletter
+     *   4.4 - calendar
+     *	 4.5 - sidebar-scroll
+     *	 4.6 - sidebar-weather
+     * 5.0 - Footer
+     *   5.1 - copyrights
+     * 6.0 - Contact
+     * 7.0 - Sport
+     *   7.1 - Sport Promo
+     *   7.2 - Sport Fixtures & Results
+     *   7.3 - Tennis Results
+     *   7.4 - article-list shopping / article-list tickets
+     * 8.0 - 404 Error Page
+     * 9.0 - Single Post Page
+     *   9.1 - Author Post
+     *   9.2 - Comment Section
+     * 10.0 - Video Page
+     * 11.0 - Parallax
+     * 12.0 - Owl Carousel
+     *   12.1 - News Slider
+     *   12.2 - Gallery Slider
+     * 13.0 - Flex Slider
+     * 14.0 - Typography Page
+     * 15.0 - About Us Page
+     * 16.0 - Coming Soon Page
+     
+    ---------------------------------------------------------------------- */
+
+
 
 @import "scss/templates/common.scss";
 @import "scss/templates/header.scss";
