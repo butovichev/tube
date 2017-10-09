@@ -1,0 +1,10 @@
+/* Media Queries
+---------------------------------------------------------------------- */
+
+/* Tablets (1024px max)
+    ---------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+	#fixed-navbar { display: none !important; }
+	.sidenav { display: block !important; } 
+	/* #mobile-nav { display: block; } */
+}

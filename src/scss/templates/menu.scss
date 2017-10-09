@@ -21,13 +21,34 @@
 .nav>li {
     position: relative;
     text-transform: capitalize;
-    border-left: 1px solid rgba(255, 255, 255, .2);
+    white-space: nowrap;
+    word-wrap: normal;
+    padding: 0 5px;
 }
 
 .nav>li>a {
 	font-size: 18px;
 	color: $black-color;
 }
+
+
+.sidenav {
+	background: rgba(44, 44, 52, .9);
+	display: none;
+	font-size: 1.4rem;
+	font-weight: 400;
+	left: 0;
+	transform: translate(-100%, 0);
+	transition: transform .3s;
+	width: 100%;
+	z-index: 999;
+	height: 100%;
+	position: fixed;
+	overflow-y: scroll!important;
+	-webkit-overflow-scrolling: touch;
+	top: 0;
+	bottom: 0;
+} 
 
 /* 2.4 - dropdown-menu
 -----------------------------------------------------------------*/
@@ -48,8 +69,9 @@
 }
 
 .dropdown-menu > li{
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
+	white-space: pre-wrap !important; 
 	width: 250px;
 }
 
@@ -89,3 +111,17 @@
 .nav ul:after {
 	clear: both;
 }
+
+/* 2.5 - mobile-menu
+-----------------------------------------------------------------*/
+
+
+/* .navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+        position: relative;
+        display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+
+} */
