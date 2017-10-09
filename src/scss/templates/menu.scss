@@ -33,22 +33,15 @@
 
 
 .sidenav {
-	background: rgba(44, 44, 52, .9);
 	display: none;
 	font-size: 1.4rem;
 	font-weight: 400;
-	left: 0;
-	transform: translate(-100%, 0);
-	transition: transform .3s;
 	width: 100%;
 	z-index: 999;
 	height: 100%;
-	position: fixed;
-	overflow-y: scroll!important;
 	-webkit-overflow-scrolling: touch;
-	top: 0;
-	bottom: 0;
-} 
+	overflow-y: scroll!important;
+}
 
 /* 2.4 - dropdown-menu
 -----------------------------------------------------------------*/
@@ -114,14 +107,26 @@
 
 /* 2.5 - mobile-menu
 -----------------------------------------------------------------*/
+#mobile-nav{
+	display: none; 
+}
 
+.navbar-toggle {
+    margin: 0;
+    border-radius: 3px;
+    padding: 5px 9px;
+    border: 1px solid #ddd;
+    background: transparent;
+    display: block; 
+    margin-top: 10px;
+}
 
-/* .navbar-default .navbar-toggle .icon-bar {
-    background-color: #888;
-        position: relative;
-        display: block;
+.navbar-toggle .icon-bar {
+    display: block;
     width: 22px;
     height: 2px;
     border-radius: 1px;
-
-} */
+    position: relative;
+    background-color: #888;
+    margin: 5px 0 5px 0;
+}
