@@ -4,6 +4,7 @@ $black-color: #000000;
 $white-color: #FFFFFF;
 $header-top-height: 80px;
 $border-color: #dde0e5;
+$red-color: #FF0000;
 /*-----------------------------------------------------------------------------------
      
         Theme Name: Tube Theme
@@ -88,8 +89,6 @@ $border-color: #dde0e5;
      * 16.0 - Coming Soon Page
      
     ---------------------------------------------------------------------- */
-
-
 
 @import "scss/templates/common.scss";
 @import "scss/templates/header.scss";

@@ -16,6 +16,8 @@
 #fixed-navbar{
 	height: $header-top-height;
 	padding: 0;
+	display: flex;
+	flex-direction: row;
 }
 
 .nav>li {
@@ -116,9 +118,15 @@
     border-radius: 3px;
     padding: 5px 9px;
     border: 1px solid #ddd;
-    background: transparent;
+    background: $white-color;
     display: block; 
-    margin-top: 10px;
+    margin-top: 5px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.navbar-toggler-right{
+	right: 25px;
 }
 
 .navbar-toggle .icon-bar {
@@ -129,4 +137,164 @@
     position: relative;
     background-color: #888;
     margin: 5px 0 5px 0;
+}
+
+.sidenav {
+	background: rgba(44, 44, 52, .9);
+	font-size: 1.4rem;
+	font-weight: 400;
+	left: 0;
+	transform: translate(-100%, 0);
+	transition: transform .3s;
+	width: 100%;
+	z-index: 999;
+	height: 100%;
+	position: fixed;
+	overflow-y: scroll!important;
+	-webkit-overflow-scrolling: touch;
+	top: 0;
+	bottom: 0;
+}
+
+.sidenav.show {
+	transform: translate(0, 0);
+}
+
+.sidenav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav-menu li {
+	display: block;
+	position: relative;
+	border-bottom: 1px solid rgba(161, 161, 179, .23);
+	text-transform: uppercase;
+}
+
+.sidenav-menu li a:hover {
+	color: $white-color !important;
+}
+
+
+.sidenav-menu a {
+	background: 0 0;
+	color: rgba(255, 255, 255, .6);
+	letter-spacing: .3px;
+	text-transform: uppercase;
+	display: block;
+	line-height: 22px;
+	padding: 16px 22px;
+	overflow-x: hidden;
+} 
+
+.sidenav-menu .icon-sub-menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 54px;
+	width: 54px;
+	border-left: 1px solid rgba(161, 161, 179, .23);
+	cursor: pointer;
+}
+
+.sidenav-dropdown-icon {
+	display: none;
+	height: 16px;
+	right: 20px;
+}
+
+.sidenav-dropdown-icon.show {
+	display: block;
+}
+
+.sidenav-dropdown-icon.show::after {
+	font-family: 'FontAwesome';
+	content: "\f107";
+	right: 1px;
+	font-size: 18px;
+	color: rgba(161, 161, 179, .73);
+	position: absolute;
+	text-align: center;
+}
+
+.sidenav-dropdown-icon.up-icon::after {
+	font-family: 'FontAwesome';
+	content: "\f106"; 
+	right: 1px;
+	font-size: 18px;
+	color: $white-color;
+	position: absolute;
+	text-align: center;
+	padding: 14px 20px;
+}
+
+.sidenav-dropdown-icon {
+	color: #757575;
+	position: absolute;
+	text-align: center;
+	top: 16px;
+}
+
+.sidenav-dropdown-icon.up-icon{
+	background: $red-color;
+}
+
+.icon-sub-menu .up-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 54px;
+	width: 54px;
+	color: $white-color;
+}
+
+.sidenav-menu a:hover {
+	background: #55555e;
+	color: $white-color!important;
+}
+
+.sidenav-menu a.active {
+	color: #FAFAFA;
+}
+
+.sidenav-dropdown {
+	display: none;
+	list-style: none;
+	padding: 0;
+	background-color: #5c5c66;
+}
+
+.sidenav-dropdown a {
+	padding-left: 22px;
+}
+
+.sidenav-dropdown a:hover {
+	color: #FFF;
+}
+
+.sidenav-dropdown li:first-child a {
+	box-shadow: inset 0 1px 1px rgba(92, 92, 92, .23);
+}
+
+.sidenav .icon-bar {
+	background-color: #888;
+}
+
+.sidenav-brand {
+    background: $white-color;
+    color: #FAFAFA;
+    font-weight: 400;
+    padding: 4px 24px 4px 20px;
+    height: 60px;
+    width: 100%;
+}
+
+.sidenav-header-logo{
+	padding: 10px 0 0 0;
+}
+
+.header-top-mobile{
+	display: none;
 }

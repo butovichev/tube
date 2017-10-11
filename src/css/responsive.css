@@ -1,12 +1,20 @@
 /* Media Queries
 ---------------------------------------------------------------------- */
 
+/* Smaller than standard 1200 (browsers)
+    ---------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+	.header-top-desktop{ display: none !important; }
+	.header-top-mobile{ display: block !important; }
+	#fixed-navbar { display: none !important; }
+	#mobile-nav{ display: block !important; float: right;}
+	
+}
+
+
+
 /* Tablets (1024px max)
     ---------------------------------------------------------------------- */
-@media only screen and (max-width: 1024px) {
-	#fixed-navbar { display: none !important; }
-	/* .sidenav { display: block !important; }  */
-	#mobile-nav{
-		display: block !important;
-	}
-}
+/* @media only screen and (max-width: 1024px) {
+	.header-logo{ display: block; text-align: center; }	
+} */

@@ -25,20 +25,65 @@
 	font-size:20px;
 }
 
-
-
 /* 2.2 Top Header Styles
 -----------------------------------------------------------------*/
-
 .header-top{
-	height: $header-top-height;
-}
-.header-logo{
 	font-size: 32px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+.header-top-desktop{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-logo{
+	margin: 0 10px;
+}
+
+.btn-search-video{
+	border: 1px solid $red-color;
+	background: transparent;
+	color: $red-color;
+	font-size: 16px;
+	border-radius: 0;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.glass-button{
+	padding: 0 10px;
+}
+
+.logo-mobile{
+	margin: 14px 0 0 20px;
+	display: inline-block;
+}
+
+.desktop-search-form{
+	position: absolute;
+	right: 15px; 
+	top: 15px;
+}
+
+.desktop-search-form input{
+	height: 54px;
+	border: 1px solid $border-color;
+	color: gray;
+	display: none;
+	width: 0;
+	padding: 0 0 0 10px;
+}
+
+.header-top-mobile-block{
+	min-width: 320px;
+}
+
+
+
+
 
 
 
