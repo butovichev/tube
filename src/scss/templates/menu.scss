@@ -125,10 +125,6 @@
     cursor: pointer;
 }
 
-.navbar-toggler-right{
-	right: 25px;
-}
-
 .navbar-toggle .icon-bar {
     display: block;
     width: 22px;
@@ -140,7 +136,7 @@
 }
 
 .sidenav {
-	background: rgba(44, 44, 52, .9);
+	background: rgba(44, 44, 52, 1);
 	font-size: 1.4rem;
 	font-weight: 400;
 	left: 0;
@@ -286,8 +282,8 @@
     background: $white-color;
     color: #FAFAFA;
     font-weight: 400;
-    padding: 4px 24px 4px 20px;
-    height: 60px;
+    padding: 0;
+    height: 110px;
     width: 100%;
 }
 

@@ -57,19 +57,26 @@
 	padding: 0 10px;
 }
 
-.logo-mobile{
-	margin: 14px 0 0 35px;
+.logo-mobile, .logo-mobile-inner{
 	display: inline-block;
+	position: absolute;
+	left: 35px;
+	top: 14px;
 }
 
 .desktop-search-form{
 	position: absolute;
-	right: 15px; 
-	top: 15px;
+    right: 25px;
+    top: 15px;
 }
 
-.desktop-search-form input{
-	height: 54px;
+.mobile-search-form{
+	position: absolute;
+    right: 25px;
+    top: 60px;	
+}
+
+.desktop-search-form input, .mobile-search-form input{
 	border: 1px solid $border-color;
 	color: gray;
 	display: none;
@@ -77,7 +84,17 @@
 	padding: 0 0 0 10px;
 }
 
+.desktop-search-form input{
+	height: 54px;
+}
+
+.mobile-search-form input{
+	height: 45px;
+}
+
+
 .header-top-mobile-block{
+	position: relative;
 	min-width: 320px;
 }
 

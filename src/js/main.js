@@ -30,27 +30,26 @@
 	/* 3. Search */	
 	$(".desktop-search-form .glass-button").click(function(){
 		
-		console.log('Width = ' + $(".desktop-search-form input").css("width"));
+			if ($(".desktop-search-form input").css("width") < '500px'){
+				$(".desktop-search-form input").css("width", Math.round($(this).offset().left - $("#fixed-navbar").offset().left) + 'px');
+			}
+			$(".desktop-search-form input").toggle("slow");
+	});
 
+	$(".mobile-search-form .glass-button").click(function(){
+			console.log('left1 = ' + $(".logo-mobile").offset().left);
+			console.log('left2 = ' + $(this).offset().left);
+			
+			console.log('Diffrence = ' + Math.round($(this).offset().left - $(".logo-mobile").offset().left));
+			
 
-		$(".desktop-search-form input").css("width", Math.round($(this).offset().left - $("#fixed-navbar").offset().left) + 'px');
-		
-		
-		
-		$(".desktop-search-form input").toggle("slow");
-		
-		
-
-		/* console.log('Top = ' + $(this).offset().top);
-		console.log('Left = ' + $(this).offset().left);
-
-		console.log('Top = ' + $("#fixed-navbar").offset().top);
-		console.log('Left = ' + $("#fixed-navbar").offset().left);
-		*/
-		
-				
+			if ($(".mobile-search-form input").css("width") < '10px'){
+				$(".mobile-search-form input").css("width", Math.round($(this).offset().left - $(".logo-mobile").offset().left) + 'px');
+			}
+			$(".mobile-search-form input").toggle("slow");
 
 	});
+
 	
 
 	
