@@ -1,9 +1,9 @@
 // ========== TABLE OF CONTENTS =========== //
 //
 // 1. Page Loader 
-// 2. Text fitting for headlines
-// 3. Parallax
-// 4. Calendar
+// 2. Menu Toggle
+// 3. Search
+// 4. Resize window
 //
 // ======================================= //
 
@@ -29,27 +29,46 @@
 
 	/* 3. Search */	
 	$(".desktop-search-form .glass-button").click(function(){
-		
-			if ($(".desktop-search-form input").css("width") < '500px'){
-				$(".desktop-search-form input").css("width", Math.round($(this).offset().left - $("#fixed-navbar").offset().left) + 'px');
-			}
-			$(".desktop-search-form input").toggle("slow");
+		search_form_change();
+		$(".desktop-search-form input").toggle("slow");
 	});
 
 	$(".mobile-search-form .glass-button").click(function(){
-			console.log('left1 = ' + $(".logo-mobile").offset().left);
-			console.log('left2 = ' + $(this).offset().left);
-			
-			console.log('Diffrence = ' + Math.round($(this).offset().left - $(".logo-mobile").offset().left));
-			
-
-			if ($(".mobile-search-form input").css("width") < '10px'){
-				$(".mobile-search-form input").css("width", Math.round($(this).offset().left - $(".logo-mobile").offset().left) + 'px');
-			}
-			$(".mobile-search-form input").toggle("slow");
-
+		search_mobile_form_change();
+		$(".mobile-search-form input").toggle("slow");
 	});
 
+	
+	/**
+	* This function is performed when the window size changes
+	*/
+	function search_mobile_form_change(){
+		var width = Math.round($(".mobile-search-form .glass-button").offset().left - $(".logo-mobile").offset().left);
+
+		if (width > 0){
+			$(".mobile-search-form input").css("width", width + "px");		
+		}
+	}
+
+	/**
+	* This function is performed when the window size changes
+	*/
+	function search_form_change(){
+		var width = Math.round($('.desktop-search-form .glass-button').offset().left - $("#fixed-navbar").offset().left - 6);
+		//var width = Math.round($("#fixed-navbar").css("width") - $(".glass-button").css("width") - $(".btn-search-video").css("width"));
+		//var width = Math.round($("#fixed-navbar").css("width"));	
+		//console.log('width = ' + width);
+
+		if (width > 0){
+			$(".desktop-search-form input").css("width", width + 'px');
+		}
+	}
+
+	/* 4. Resize window */	
+	$(window).resize(function(){
+		search_form_change();
+		search_mobile_form_change();
+	}); 	
 	
 
 	
