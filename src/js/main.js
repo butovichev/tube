@@ -55,10 +55,6 @@
 	*/
 	function search_form_change(){
 		var width = Math.round($('.desktop-search-form .glass-button').offset().left - $("#fixed-navbar").offset().left - 6);
-		//var width = Math.round($("#fixed-navbar").css("width") - $(".glass-button").css("width") - $(".btn-search-video").css("width"));
-		//var width = Math.round($("#fixed-navbar").css("width"));	
-		//console.log('width = ' + width);
-
 		if (width > 0){
 			$(".desktop-search-form input").css("width", width + 'px');
 		}
@@ -70,9 +66,5 @@
 		search_mobile_form_change();
 	}); 	
 	
-
-	
-	
-
 })(jQuery);
 

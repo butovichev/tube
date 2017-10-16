@@ -47,8 +47,8 @@ $red-color: #FF0000;
      *   	2.5.1 - Clock / Date 
      *   2.6 - dropdown menu
      *   2.7 - sidenav off-canvas menu 
-     * 3.0 - Main Section
-     *   3.1 - News
+     * 3.0 - Main Section +
+     *   3.1 - Slider styles +
      *   3.2 - Container-Full & Container-Half
      *   3.3 - Entry Block
      *   3.4 - Category List
@@ -93,3 +93,4 @@ $red-color: #FF0000;
 @import "scss/templates/common.scss";
 @import "scss/templates/header.scss";
 @import "scss/templates/menu.scss";
+@import "scss/templates/slider.scss";

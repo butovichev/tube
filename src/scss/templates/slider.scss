@@ -1,6 +1,57 @@
-.slider {
-	background: green;
-	height: 100px;
-	width: 100%;
+/* 3.0 - Main Section
+    -----------------------------------------------------------------*/
 
+/* 3.1 Slider styles
+-----------------------------------------------------------------*/
+
+.slider {
+	height: 598px;
+	width: 100%;
+	overflow: hidden;
 }
+
+.slider img{
+	height: 598px;
+}
+
+.carousel{
+	height: 100%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../img/prev.png');
+    width: 15px;
+    height: 28px;
+}
+
+.carousel-control-next-icon {    
+	background-image: url('../img/next.png');
+    width: 15px;
+    height: 28px;
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+	background: transparent;
+} 
+
+.carousel-indicators li:before{
+	border: 2px solid #FFFFFF;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+}
+
+.carousel-indicators li.active:before{
+	border: 5px solid #FFFFFF;
+}
+
+.carousel-central-text{
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 50px;
+}
+
