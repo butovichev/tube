@@ -12,6 +12,8 @@ npm install \
 	gulp-autoprefixer \
 	gulp-cssnano \
 	gulp-jshint \
+    gulp-rigger \
+    gulp-include \
 	gulp-concat \
 	gulp-uglify \
 	gulp-imagemin \
@@ -23,6 +25,5 @@ npm install \
 	gulp-htmlhint \
 	gulp-csslint \
 	gulp-watch \
-
 	--save-dev 
 	 

@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     rigger = require('gulp-rigger'),
+    include = require("gulp-include"),
     htmlhint = require('gulp-htmlhint'),
     csslint = require('gulp-csslint'),
     watch = require('gulp-watch'),
@@ -26,7 +27,7 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: { //path to sources
-        html: 'src/*.html', 
+        html: 'src/**/*.html', 
         js: 'src/js/*.js',
         style: 'src/main.scss',
         img: 'src/images/**/*.*', 
@@ -58,7 +59,7 @@ var config = {
 // build html
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
-        .pipe(rigger())
+        .pipe(include())
         .pipe(htmlhint())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true})); 
